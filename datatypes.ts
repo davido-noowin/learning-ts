@@ -67,3 +67,6 @@ console.log(swap_numbers);
 let department : any;
 department = "Number1";
 department = 10;
+
+/* VOID */
+// returns nothing

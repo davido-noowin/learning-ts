@@ -34,3 +34,10 @@ function swap(num1, num2) {
 }
 swap_numbers = swap(10, 20);
 console.log(swap_numbers);
+/* ANY */
+// no exceptions thrown, it accepts any datatypes
+let department;
+department = "Number1";
+department = 10;
+/* VOID */
+// returns nothing
