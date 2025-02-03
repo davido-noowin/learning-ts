@@ -11,6 +11,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Employee_id;
+Object.defineProperty(exports, "__esModule", { value: true });
 class Employee {
     static getEmployeeCount() {
         return 50;
@@ -34,6 +35,9 @@ class Employee {
     getNameWithAddress() {
         return `${this.name}, ${this.address}`;
     }
+    login() {
+        return { name: 'Pual', age: 21, id: 5, email: 'paul@comp.com' };
+    }
 }
 _Employee_id = new WeakMap();
 // inheritance
@@ -51,6 +55,7 @@ let mike = new Manager(2, 'Mike', '123 Sesame Street');
 // john.name = 'John';
 // john.address = '4420 Beach BLVD'
 console.log(john);
+console.log(john.login());
 console.log(john.getNameWithAddress());
 console.log(mike.getNameWithAddress());
 console.log(mike.empId);

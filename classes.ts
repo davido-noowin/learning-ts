@@ -1,4 +1,6 @@
-class Employee {
+import { User, Login } from './interfaces'
+
+class Employee implements Login{
     // ! = this expression cannot be null or undefined here, so don't complain about the possibility of it being null or undefined
     // private or #
     #id: number;
@@ -30,6 +32,10 @@ class Employee {
     getNameWithAddress(): string {
         return `${this.name}, ${this.address}`
     }
+
+    login(): User {
+        return {name: 'Pual', age: 21, id: 5, email: 'paul@comp.com'};
+    }
 }
 
 // inheritance
@@ -49,6 +55,7 @@ let mike = new Manager(2, 'Mike', '123 Sesame Street')
 // john.name = 'John';
 // john.address = '4420 Beach BLVD'
 console.log(john);
+console.log(john.login());
 console.log(john.getNameWithAddress());
 console.log(mike.getNameWithAddress());
 console.log(mike.empId);
